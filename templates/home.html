@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-5">
+  <div class="container-xl">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-4">
+          <h1 class="display-5 fw-bold">Track your finances with ease</h1>
+          <p class="text-muted">Simple, private, and fast. Manage your income, expenses, budgets, and reports in one place.</p>
+        </div>
+        <div class="d-flex justify-content-center gap-3 mb-5">
+          <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg">Login</a>
+          <a href="{{ url_for('auth.signup') }}" class="btn btn-outline-dark btn-lg">Sign Up</a>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Transactions</h5>
+                <p class="card-text text-muted">Add income and expenses with categories and notes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Budgets</h5>
+                <p class="card-text text-muted">Set monthly and category budgets and see progress.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Reports</h5>
+                <p class="card-text text-muted">Visualize trends and breakdowns over time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
