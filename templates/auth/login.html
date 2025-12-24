@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="min-vh-100 d-flex align-items-center justify-content-center">
+  <div class="card p-4" style="max-width: 480px; width: 100%;">
+    <h2 class="mb-3 text-center">Login</h2>
+    <form method="post">
+      <div class="mb-3">
+        <label class="form-label" for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" required />
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
+      <div class="mt-3 d-flex justify-content-between">
+        <a href="{{ url_for('auth.signup') }}" class="link-secondary">Create account</a>
+        <a href="{{ url_for('auth.forgot') }}" class="link-secondary">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+  
+</div>
+{% endblock %}
